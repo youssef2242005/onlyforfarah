@@ -1,0 +1,25 @@
+
+.container {
+        width: 130px;
+        height: 60px;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+    bottom: 30%;
+  margin-top: -50px;
+  margin-left: -50px;
+transform: translate(-10%, -45%);
+    display: table;
+        background-color: #ccc;         
+    }
+
+    #container .image-container {
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    #container .image-container img {
+        max-width: 50%;
+        max-height: 50%;        
+    }

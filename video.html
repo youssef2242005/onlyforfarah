@@ -1,0 +1,29 @@
+<DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>onlyforyou-video</title>
+        <link rel="stylesheet" href="stylevideo.css">
+              </head>
+    <body>
+<div id="preloader"></div>
+        
+        <div class="centered">
+    <!-- Mp4, WebM, and Ogg -->
+     <video  height="960" width="530" controls>
+            <source src="video.mp4">
+               </video>
+        </div>  
+     <script>
+        var loader = document.getElementById("preloader");
+            
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+            })
+        </script>
+        
+        
+    </body>
+        
+    </html>
