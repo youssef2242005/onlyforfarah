@@ -96,7 +96,7 @@ button:hover{
 }
 
 .balloons img{
-  height: 70px;
+  height: 650px;
   position: absolute;
 }
 .balloons img:nth-child(1){
