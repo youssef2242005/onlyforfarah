@@ -1,104 +1,99 @@
-/* General Styles */
-* {
+*{
     margin: 0;
     padding: 0; 
-    box-sizing: border-box;
     font-family: 'Pacifico', cursive;
-    color: black;
-}
-
-h1 {
-    font-family: 'Pacifico', cursive;
-}
-
-.banner {
-    width: 100%;
-    height: 100vh;
-    background-image: url(IMG_9430.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;   
-    position: relative;
-}    
-
-.navbar {
+      color: black;
+  }
+  h1{
+      font-family: 'Pacifico', cursive;
+  }
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: url(IMG_9430.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;   
+  }    
+  }
+  .navbar{
     width: 85%;
     margin: auto;
     padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.navbar ul li {
+  }
+  .navbar ul li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
-}
-
-.content {
+  }
+  .content{
     width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
-    padding: 0 20px; /* Add padding for smaller screens */
-}
-
-.content h1 {
-    font-size: 5vw; /* Responsive text size */
-    margin-top: 20px;
-}
-
-.content p {
+  }
+  .content hl{
+    font-size: 70px;
+    margin-top: 80px;
+  }
+  .content p{
     margin: 20px auto;
     font-weight: 100;
-    line-height: 1.5;
-    font-size: 4vw; /* Responsive text size */
-}
-
-button {
+    line-height: 25px;
+      font-size: 15px;
+    font-family: 'Pacifico', cursive;
+  }
+  button{
     width: 200px;
-    max-width: 80%; /* Adjust for small screens */
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: 500;
-    border: 2px solid #fffff0; 
+    border: 2px solid; 
+      border-color: #fffff0;
     background: transparent;
     color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
+      font-size: 20;
+  font-family: 'Pacifico', cursive;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+  }
+  
+  span{
+      background: #e39ff6;
+      height: 100%;
+      width: 0;
+      border-radius: 25px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: 0.5s;
+  }
+  button:hover span{
+      width: 100%;
+  }
+  button:hover{
+      border: none;
+  }
+  .fa-spotify{
+      color:#ffffff;
+  }
+  .fa-file-text{
+      color:#ffffff;
+  }
+  .fa-video-camera{
+      color:#ffffff;
+  }
 
-span {
-    background: #e39ff6;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-button:hover span {
-    width: 100%;
-}
-
-button:hover {
-    border: none;
-}
-
-.fa-spotify, .fa-file-text, .fa-video-camera {
-    color: #ffffff;
-}
-
+/* Transition Overlay */
 .transition-overlay {
     position: fixed;
     top: 0;
@@ -112,7 +107,7 @@ button:hover {
     animation: blackout 3s ease-in-out, heartZoom 2s 3s forwards;
 }
 
-/* Animation for blackout */
+/* Animation for three black screens */
 @keyframes blackout {
     0% { opacity: 1; }
     33% { opacity: 0; }
@@ -127,61 +122,22 @@ button:hover {
 }
 
 /* Special Day Styling */
-.special {
-    background-image: url(annback.png); /* Replace with your special image */
-    color: white;
+.special{
+  width: 100%;
+  height: 100vh;
+  background-image: url(annback.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;   
+  
 }
 
 .special .content h1 {
     color: red;
-    font-size: 8vw; /* Adjust size for phones */
+    font-size: 50px;
 }
 
-.special button {
-    border-color: gold;
-    color: gold;
-}
 
 .special button:hover span {
     background: gold;
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .content h1 {
-        font-size: 7vw; /* Slightly smaller for tablets */
-    }
-
-    .content p {
-        font-size: 3.5vw; /* Smaller paragraph text */
-    }
-
-    button {
-        font-size: 16px; /* Adjust button text size */
-        padding: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .content {
-        padding: 0 10px; /* More padding for very small screens */
-    }
-
-    .content h1 {
-        font-size: 6vw; /* Fit small phones */
-    }
-
-    .content p {
-        font-size: 14px; /* Fit smaller phones */
-    }
-
-    button {
-        width: 180px;
-        font-size: 14px; /* Smaller button text */
-    }
-
-    img {
-        width: 80%; /* Resize images */
-        max-width: 150px;
-    }
 }
