@@ -1,44 +1,244 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>onlyforfarah</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-</style>
-<body>
-    <div class="banner">
-       <div class="navbar">
-       </div>
-                
-       <div class="content">
-           <h1>HIIIII!!!, FAROUHYYY</h1>
-           <p>I LOVE SO MUCH !!!</p>
-           <div>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Pacifico', cursive;
+            color: black;
+        }
 
-         <a href="video.html">
-   <button>
-       <span></span><i class='fa fa-video-camera'></i>      video
-               </button>
-           </a> 
-                        <button 
-                       type="button"onclick="location.href='https://docs.google.com/document/d/1qbicmVRzHdKejX0kWfORrErDp5frFStXXVpB-A_TeVk/edit?usp=sharing'">
-                                      <span></span><i class='fa fa-file-text'></i>      text
-               </button>
-               <button 
-                       type="button"onclick="location.href='https://open.spotify.com/playlist/2jW4Ru3T2EDiotBWuNei8n?si=db4f0a8dc5314835'">
-                                      <span></span><i class='fa fa-spotify'></i>        playlist
-               </button> 
-        </div>
+        h1 {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url(IMG_9430.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+
+        .content h1 {
+            font-size: 70px;
+            margin-top: 80px;
+        }
+
+        .content p {
+            margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: 500;
+            border: 2px solid #fffff0;
+            background: transparent;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        span {
+            background: #e39ff6;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        button:hover span {
+            width: 100%;
+        }
+
+        button:hover {
+            border: none;
+        }
+
+        .fa-spotify {
+            color: #ffffff;
+        }
+
+        .fa-file-text {
+            color: #ffffff;
+        }
+
+        .fa-video-camera {
+            color: #ffffff;
+        }
+
+        /* Transition Overlay */
+        .transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            animation: blackout 3s ease-in-out, heartZoom 2s 3s forwards; /* Slower heart zoom */
+        }
+
+        /* Animation for three black screens */
+        @keyframes blackout {
+            0% {
+                opacity: 1;
+            }
+            33% {
+                opacity: 0;
+            }
+            66% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Animation for the heart zooming in */
+        @keyframes heartZoom {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+                background-color: red;
+            }
+            100% {
+                transform: scale(20);
+                opacity: 0;
+            }
+        }
+
+        /* Special Day Styling */
+        .special {
+background-image: url(annback.png);
+/* Replace with your special image */
+            color: white;
+        }
+
+        .special .content h1 {
+            color: red;
+            font-size: 80px;
+        }
+
+        .special button {
+            border-color: gold;
+            color: gold;
+        }
+
+        .special button:hover span {
+            background: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Transition Overlay -->
+    <div class="transition-overlay"></div>
+
+    <!-- Main Content -->
+    <div class="banner" id="banner">
+        <div class="navbar"></div>
+        <div class="content" id="content">
+            <h1>HIIIII!!!, FAROUHYYY</h1>
+            <p>I LOVE YOU SO MUCH !!!</p>
             <div>
-               <a href="click.html">
-               <img src="dab.gif" height="100" width="150"></img></a> 
-        </div>          
+                <a href="video.html">
+                    <button>
+                        <span></span><i class='fa fa-video-camera'></i> video
+                    </button>
+                </a>
+                <button 
+                    type="button" onclick="location.href='https://docs.google.com/document/d/1qbicmVRzHdKejX0kWfORrErDp5frFStXXVpB-A_TeVk/edit?usp=sharing'">
+                    <span></span><i class='fa fa-file-text'></i> text
+                </button>
+                <button 
+                    type="button" onclick="location.href='https://open.spotify.com/playlist/2jW4Ru3T2EDiotBWuNei8n?si=db4f0a8dc5314835'">
+                    <span></span><i class='fa fa-spotify'></i> playlist
+                </button>
+            </div>
+            <div>
+                <a href="click.html">
+                    <img src="dab.gif" height="100" width="150"></img>
+                </a>
+            </div>
+        </div>
     </div>
-                                                 
-        </body>
-    </html>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const overlay = document.querySelector(".transition-overlay");
+            const currentDate = new Date();
+            const changeDate = new Date('2024-12-10'); // Start of special period
+            const revertDate = new Date('2024-12-25'); // End of special period
+
+            // Show transition overlay on load
+            overlay.classList.add("active");
+
+            setTimeout(() => {
+                overlay.classList.remove("active");
+            }, 6000); // Total duration for blackout + heartZoom
+
+            // Change content based on the date
+            if (currentDate >= changeDate && currentDate < revertDate) {
+                setTimeout(() => {
+                    document.getElementById('banner').classList.add('special');
+                    document.getElementById('content').innerHTML = `
+                        <h1>HAPPY ANNIVERSARYYY, BABYYYYY!</h1>
+                        <p>You're the best gift I could ask for!</p>
+
+                        <div>
+                            <a href="click2.html">
+                                <img src="datee.gif" height="100" width="150"></img>
+                            </a>
+                        </div>`;
+                }, 6000); // Wait for overlay to fade out and heartZoom effect
+            }
+        });
+    </script>
+</body>
+</html>
