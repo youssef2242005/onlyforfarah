@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0; 
+    box-sizing: border-box;
     font-family: 'Pacifico', cursive;
     color: black;
 }
@@ -17,7 +18,8 @@ h1 {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;   
-}
+    position: relative;
+}    
 
 .navbar {
     width: 85%;
@@ -41,22 +43,24 @@ h1 {
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
+    padding: 0 20px; /* Add padding for smaller screens */
 }
 
 .content h1 {
-    font-size: 70px;
-    margin-top: 80px;
+    font-size: 5vw; /* Responsive text size */
+    margin-top: 20px;
 }
 
 .content p {
     margin: 20px auto;
     font-weight: 100;
-    line-height: 25px;
-    font-size: 15px;
+    line-height: 1.5;
+    font-size: 4vw; /* Responsive text size */
 }
 
 button {
     width: 200px;
+    max-width: 80%; /* Adjust for small screens */
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
@@ -65,7 +69,7 @@ button {
     border: 2px solid #fffff0; 
     background: transparent;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -95,7 +99,6 @@ button:hover {
     color: #ffffff;
 }
 
-/* Transition Overlay */
 .transition-overlay {
     position: fixed;
     top: 0;
@@ -109,7 +112,7 @@ button:hover {
     animation: blackout 3s ease-in-out, heartZoom 2s 3s forwards;
 }
 
-/* Animation for three black screens */
+/* Animation for blackout */
 @keyframes blackout {
     0% { opacity: 1; }
     33% { opacity: 0; }
@@ -131,7 +134,7 @@ button:hover {
 
 .special .content h1 {
     color: red;
-    font-size: 80px;
+    font-size: 8vw; /* Adjust size for phones */
 }
 
 .special button {
@@ -141,4 +144,44 @@ button:hover {
 
 .special button:hover span {
     background: gold;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 7vw; /* Slightly smaller for tablets */
+    }
+
+    .content p {
+        font-size: 3.5vw; /* Smaller paragraph text */
+    }
+
+    button {
+        font-size: 16px; /* Adjust button text size */
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 0 10px; /* More padding for very small screens */
+    }
+
+    .content h1 {
+        font-size: 6vw; /* Fit small phones */
+    }
+
+    .content p {
+        font-size: 14px; /* Fit smaller phones */
+    }
+
+    button {
+        width: 180px;
+        font-size: 14px; /* Smaller button text */
+    }
+
+    img {
+        width: 80%; /* Resize images */
+        max-width: 150px;
+    }
 }
